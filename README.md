@@ -6,40 +6,40 @@ Welcome to my CFA Level 1 Investment Tools repository! This repository is design
 ## What's inside
 This repository includes a range of tools and scripts, including:
 
-Alternative Investments
+* Alternative Investments
 
-Corporate Finance
+* Corporate Finance
 
-Corporate Issuers
+* Corporate Issuers
 
-Derivatives
+* Derivatives
 
-Economics
+* Economics
 
-Equity
+* Equity
 
-Ethical and Professional Standards
+* Ethical and Professional Standards
 
-Financial Reporting and Analysis
+* Financial Reporting and Analysis
 
-Fixed Income
+* Fixed Income
 
-Portfolio Management
+* Portfolio Management
 
-Quantitative Methods
+* Quantitative Methods
 
 
-Why Use This Repository
+## Why Use This Repository
 
 
 This repository is designed to be a valuable resource for anyone studying for the CFA Level 1 exam or looking to apply their investment knowledge in a practical way. By using these tools and scripts, you'll be able to:
 
 
 
-Quickly and easily apply your knowledge to real-world scenarios
+* Quickly and easily apply your knowledge to real-world scenarios
 
-Consolidate your understanding of key concepts
+* Consolidate your understanding of key concepts
 
-Develop your skills in financial analysis and modeling
+* Develop your skills in financial analysis and modeling
 
-Enhance your career prospects in the investment industry
+* Enhance your career prospects in the investment industry
