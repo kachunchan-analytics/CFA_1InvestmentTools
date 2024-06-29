@@ -68,6 +68,26 @@ def present_value_with_payment(pmt, r, n):
   """
   return pmt * ((1 - (1 + r) ** -n) / r)
 
+def calculate_future_value_of_uneven_cash_flows(cash_flows, interest_rate):
+    """
+    Calculates the future value of a series of uneven cash flows.
+
+    Args:
+        cash_flows (list): A list of cash flow amounts.
+        interest_rate (float): The annual interest rate.
+
+    Returns:
+        float: The future value of the uneven cash flows.
+    """
+
+    # Calculate the future value of each cash flow individually
+    future_values = [cash_flow * (1 + interest_rate)**(len(cash_flows) - i - 1) for i, cash_flow in enumerate(cash_flows)]
+
+    # Sum up the results to get the total future value
+    total_future_value = sum(future_values)
+
+    return total_future_value
+
 # Example usage:
 if __name__ == "__main__":
   # Calculate the future value of a $1000 investment at 5% interest for 10 years
