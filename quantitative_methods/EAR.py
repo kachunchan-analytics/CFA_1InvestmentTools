@@ -1,4 +1,4 @@
-def calculate_effective_annual_rate(nominal_rate, compounding_periods):
+def calculate_EAR(nominal_rate, compounding_periods):
   """
   Calculates the effective annual rate (EAR) given a nominal interest rate and 
   the number of compounding periods per year.
