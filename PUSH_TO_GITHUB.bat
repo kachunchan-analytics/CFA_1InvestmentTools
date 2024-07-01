@@ -1,6 +1,6 @@
 @echo off
 cd /d %cd%
-/min python change_TXT_to_PY.py
+python change_TXT_to_PY.py
 git add . > nul
 if %errorlevel% NEQ 0 (
   echo "Error: Git add failed!"
