@@ -1,6 +1,57 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+import pandas as pd
+import numpy as np
+from scipy.stats import chi2_contingency
+import seaborn as sns
+import matplotlib.pyplot as plt
+import squarify
+
+def load_data(file_path):
+    """Load data from a CSV file"""
+    return pd.read_csv(file_path)
+
+def chi_square_test(data, variables):
+    """Perform Chi-Square test on multiple categorical variables"""
+    for i in range(len(variables)):
+        for j in range(i+1, len(variables)):
+            contingency_table = pd.crosstab(data[variables[i]], data[variables[j]])
+            chi2, p, dof, expected = chi2_contingency(contingency_table)
+            print(f"Chi-Square statistic for {variables[i]} and {variables[j]}: {chi2}")
+            print(f"p-value for {variables[i]} and {variables[j]}: {p}")
+
+def contingency_table(data, variables):
+    """Create a contingency table for multiple categorical variables"""
+    for i in range(len(variables)):
+        for j in range(i+1, len(variables)):
+            table = pd.crosstab(data[variables[i]], data[variables[j]])
+            print(f"Contingency table for {variables[i]} and {variables[j]}:")
+            print(table)
+
+def heat_map(data, variables):
+    """Create a heat map for multiple categorical variables"""
+    for i in range(len(variables)):
+        for j in range(i+1, len(variables)):
+            contingency_table = pd.crosstab(data[variables[i]], data[variables[j]])
+            plt.figure(figsize=(10, 8))
+            sns.heatmap(contingency_table, annot=True, cmap="Blues")
+            plt.xlabel(variables[i])
+            plt.ylabel(variables[j])
+            plt.title(f"Heat Map for {variables[i]} and {variables[j]}")
+            plt.show()
+
+def tree_map(data, variables):
+    """Create a tree map for multiple categorical variables"""
+    for i in range(len(variables)):
+        for j in range(i+1, len(variables)):
+            contingency_table = pd.crosstab(data[variables[i]], data[variables[j]])
+            squarify.plot(sizes=contingency_table.values.flatten(), label=contingency_table.index, alpha=0.6)
+            plt.axis('off')
+            plt.title(f"Tree Map for {variables[i]} and {variables[j]}")
+            plt.show()
+
+
 def grouped_bar_chart(labels, men_means, women_means, title, xlabel, ylabel):
     """
     Create a Grouped Bar Chart.
